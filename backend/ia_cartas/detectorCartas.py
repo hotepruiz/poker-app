@@ -28,8 +28,8 @@ def DetectarCartas():
 
     while True:
         cartas_confirmadas = 0
-        fotograma = cap.read()
-        if not fotograma:
+        ret, fotograma = cap.read()
+        if not ret:
             break
 
         #---------------------------------------------------------------------------

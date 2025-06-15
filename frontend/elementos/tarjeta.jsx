@@ -38,7 +38,7 @@ export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad}) => {
 
             <div className="flex flex-col h-full items-center justify-center anchura-mitad">
 
-                <div className="font-dobra text-8xl text-black">
+                <div className="font-dobra text-6xl text-black">
                     %{probabilidad}
                 </div>
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import ia_cartas.detectorCartas as poker
+import ia_cartas.probabilidades as probabilidades
 import time
 
 def hola(request):
@@ -34,7 +35,7 @@ def testCartas(request):
     "carta2": player1[1]
     })
 
-def testCartas2(cantidad):
+def testCartas2(request, cantidad):
     jugadores=[]
 
     for i in range(cantidad):
@@ -46,10 +47,10 @@ def testCartas2(cantidad):
 
         jugadores.append(jugador_nuevo)
 
-    
 
+    jugadores = probabilidades.calcularProbabilidades(jugadores)
 
 
     return JsonResponse({
-        "placeholder": 0
+        "jugadores": jugadores
     })

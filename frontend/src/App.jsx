@@ -19,7 +19,9 @@ function App() {
   }
 
   const fetchear = () => {
-    fetch(`http://127.0.0.1:8000/cartas2/${cantidad}`)
+    fetch(`http://127.0.0.1:8000/kys/`)
+    /*fetch(`http://127.0.0.1:8000/cartas2/${cantidad}`)*/
+    
       .then((res) => {
         if (!res.ok) throw new Error("Error al obtener las cartas");
         return res.json();

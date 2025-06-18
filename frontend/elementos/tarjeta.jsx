@@ -13,7 +13,7 @@ export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad}) => {
     <div className={`flex flex-auto tarjeta-externa items-center ${colorFondo}`}>
         <div className="flex flex-row tarjeta-interna h-full w-full">
             
-            <div className="flex flex-col h-full items-center justify-center anchura-mitad">
+            <div className="bg-blanco flex flex-col h-full items-center justify-center anchura-mitad">
                
 
                {/* Carta 1 */}
@@ -36,9 +36,9 @@ export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad}) => {
             </div>
 
 
-            <div className="flex flex-col h-full items-center justify-center anchura-mitad">
+            <div className="bg-blanco flex flex-col h-full items-center justify-center anchura-mitad">
 
-                <div className="font-dobra text-6xl text-black">
+                <div className="font-dobra text-6xl text-negro">
                     %{probabilidad}
                 </div>
 
@@ -86,12 +86,12 @@ function elementosCarta(carta){
 
     switch(CartaParseada.palo){
         case "c"://clubs
-            colorTexto="text-black";
+            colorTexto="text-negro";
             foto="trevol.png";
             break;
 
         case "s"://espadas o picas
-            colorTexto="text-black";
+            colorTexto="text-negro";
             foto="pica.png";
             break;
 
@@ -106,7 +106,7 @@ function elementosCarta(carta){
             break;
 
         default:
-            colorTexto="text-black";
+            colorTexto="text-negro";
             foto="trevol.png";
     }
 

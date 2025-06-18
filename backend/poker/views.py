@@ -16,24 +16,8 @@ def obtenerCartas(request):
     })
 
 def testCartas(request):
-    player1=[]
-    player2=[]
 
-    player1=poker.DetectarCartas()
-    print(player1)
-
-    time.sleep(3)
-
-    player2=poker.DetectarCartas()
-    print(player2)
-
-
-    return JsonResponse({
-    "calidad": "1",
-    "probabilidad": "50",
-    "carta1": player1[0],
-    "carta2": player1[1]
-    })
+    return JsonResponse({"jugadores": [{"carta1": "2c", "carta2": "7s", "probabilidad": "13.2", "calidad": 3}, {"carta1": "Kh", "carta2": "Kd", "probabilidad": "87.1", "calidad": 1}]})
 
 def testCartas2(request, cantidad):
     jugadores=[]

@@ -1,14 +1,22 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import { TarjetaPoker } from '../elementos/tarjeta';
+import {TopBar} from '../elementos/topbar'
 
 function App() {
   const [cartas, setCartas] = useState([]);
   const [cargado, setCargado] = useState(false);
   const [cantidad, setCantidad] = useState(2);
+  const [modoOscuro, setModoOscuro] = useState(false);
 
+
+  const toggleModo = () => {
+    if(modoOscuro == true){
+      setModoOscuro(false)
+    }else{
+      setModoOscuro(true)
+   }
+  }
 
   const fetchear = () => {
     fetch(`http://127.0.0.1:8000/cartas2/${cantidad}`)
@@ -24,6 +32,18 @@ function App() {
         console.error("Error:", error);
       });
   };
+
+
+
+  if(modoOscuro==true){
+    root.style.setProperty('background-color', '#222222')
+    root.style.setProperty('--color-blanco', '#777777')
+    root.style.setProperty('--color-negro', '#ffffff')
+  }else{
+    root.style.setProperty('background-color', '#bbbbbb')
+    root.style.setProperty('--color-blanco', '#ffffff') 
+    root.style.setProperty('--color-negro', '#000000')
+  }
 
   console.log(cartas);
 
@@ -49,7 +69,11 @@ function App() {
           />
 
         </div>
-      ) : (
+      ) : (/*CARTAS CARTAS CARTAS CARTAS CARTAS CARTAS CARTAS CARTAS CARTAS CARTAS CARTAS */
+        <>
+
+        <TopBar color={"verdeazul"} onClick={toggleModo}/>
+
         <div className="flex flex-wrap justify-center gap-4 p-4 min-h-screen min-w-screen max-h-screen max-w-screen">
           
           
@@ -63,8 +87,8 @@ function App() {
             />
           ))}
 
-
         </div>
+        </>
       )}
     </>
   );

@@ -55,10 +55,10 @@ def ClasesANombreIngles(NumeroClase: int):
         '7c', '7d', '7h', '7s',
         '8c', '8d', '8h', '8s',
         '9c', '9d', '9h', '9s',
-        'ac', 'ad', 'ah', 'as',
-        'jc', 'jd', 'jh', 'js',
-        'kc', 'kd', 'kh', 'ks',
-        'qc', 'qd', 'qh', 'qs'
+        'Ac', 'Ad', 'Ah', 'As',
+        'Jc', 'Jd', 'Jh', 'Js',
+        'Kc', 'Kd', 'Kh', 'Ks',
+        'Qc', 'Qd', 'Qh', 'Qs'
     ]
     
     return NombreClases[NumeroClase]

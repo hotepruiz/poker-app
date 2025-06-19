@@ -3,6 +3,7 @@ import './App.css';
 import { TarjetaPoker } from '../elementos/tarjeta';
 import {TopBar} from '../elementos/topbar'
 
+
 function App() {
   const [cartas, setCartas] = useState([]);
   const [cargado, setCargado] = useState(false);
@@ -39,7 +40,7 @@ function App() {
 
   if(modoOscuro==true){
     root.style.setProperty('background-color', '#222222')
-    root.style.setProperty('--color-blanco', '#777777')
+    root.style.setProperty('--color-blanco', '#454545')
     root.style.setProperty('--color-negro', '#ffffff')
   }else{
     root.style.setProperty('background-color', '#bbbbbb')

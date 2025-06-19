@@ -66,7 +66,7 @@ function getColorFondo(calidad){
         colorFondo = '!bg-amarillo';
         break;
     case 3: 
-        colorFondo = '!bg-rojo';
+        colorFondo = '!bg-rojo-carta';
         break;
     default:
         colorFondo = '!bg-verde';

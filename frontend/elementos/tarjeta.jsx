@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad}) => {
+export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad, id}) => {
   
 
   let colorFondo = getColorFondo(calidad);
@@ -10,7 +10,11 @@ export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad}) => {
 
 
   return (
-    <div className={`flex flex-auto tarjeta-externa items-center ${colorFondo}`}>
+    <div className="ml-5 items-center justify-center">
+        <div>
+            <h1 className="font-medium">Jugador {id}</h1>
+        </div>
+    <div className={`items-center justify-center tarjeta-externa  ${colorFondo}`}>
         <div className="flex flex-row tarjeta-interna h-full w-full">
             
             <div className="bg-blanco flex flex-col h-full items-center justify-center anchura-mitad">
@@ -46,6 +50,7 @@ export const TarjetaPoker = ({carta1, carta2, calidad, probabilidad}) => {
             
 
         </div>
+    </div>
     </div>
   );
 };

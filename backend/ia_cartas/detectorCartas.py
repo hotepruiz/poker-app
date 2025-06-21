@@ -23,7 +23,7 @@ def ContarCartas(resultados):
             cartas_detectadas[clase] = 1
 
 
-def DetectarCartas():
+def DetectarCartas(jugador):
     cap = cv2.VideoCapture(1)
 
     while True:
@@ -38,7 +38,7 @@ def DetectarCartas():
 
         imgProcesada = FuncionesExtra.DibujarCajas(fotograma, resultados)
 
-        cv2.imshow("hola", imgProcesada)
+        cv2.imshow("Jugador "+str(jugador), imgProcesada)
         #---------------------------------------------------------------------------
 
 

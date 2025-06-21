@@ -17,20 +17,22 @@ def obtenerCartas(request):
 
 def testCartas(request):
 
-    return JsonResponse({"jugadores": [{"carta1": "2c", "carta2": "7s", "probabilidad": "13.2", "calidad": 3}, {"carta1": "Kh", "carta2": "Kd", "probabilidad": "87.1", "calidad": 1}]})
+    return JsonResponse({"jugadores": [{"carta1": "2c", "carta2": "7s", "probabilidad": "13.2", "calidad": 3, "id":1}, {"carta1": "Kh", "carta2": "Kd", "probabilidad": "87.1", "calidad": 1, "id":2}]})
 
 def testCartas2(request, cantidad):
     jugadores=[]
 
     for i in range(cantidad):
         jugador_nuevo = {}
-        cartas = poker.DetectarCartas()
+        cartas = poker.DetectarCartas(i+1)
 
         jugador_nuevo["carta1"] = cartas[0]
         jugador_nuevo["carta2"] = cartas[1]
+        
+        jugador_nuevo["id"] = i+1
 
         jugadores.append(jugador_nuevo)
-
+        time.sleep(3)
 
     jugadores = probabilidades.calcularProbabilidades(jugadores)
 

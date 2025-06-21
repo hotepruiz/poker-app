@@ -5,8 +5,8 @@ import {DropdownMenu} from './menu'
 
 export const TopBar = ({color, onClick}) => {
   return (
-    <div className={`topbar !bg-${color} !pl-3 !pr-8  !pt-2 !pb-2 flex justify-end`}>
-      {"hola com estas"}
+    <div className={`topbar !bg-verdeazul !pl-3 !pr-8  !pt-2 !pb-2 flex justify-end`}>
+      {"hola como estas"}
 
       <div className="flex items-center justify-center">
 

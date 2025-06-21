@@ -56,8 +56,10 @@
   background-color: rgb(228, 33, 33);
 
   padding: 10px;
-  min-width: 440px;
-  min-height: 240px;
+  min-width: 30vw;
+  min-height: 15vh;
+  margin: 5%;
+  
 
   max-height: 240px;
   max-width: 440px;

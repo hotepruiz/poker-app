@@ -53,10 +53,10 @@ function App() {
   return (
     <>
       {!cargado ? (
-        <div>
-
+        <div className="p-8">
+          <p className="not-italic font-medium">Ingrese la cantidad de jugadores durante la partida.</p>
           <button
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="m-5 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
             onClick={fetchear}
           >
             Cargar cartas
@@ -77,7 +77,7 @@ function App() {
 
         <TopBar color={"verdeazul"} onClick={toggleModo}/>
 
-        <div className="flex flex-wrap justify-center gap-4 p-4 min-h-screen min-w-screen max-h-screen max-w-screen">
+        <div className="grid grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center min-h-screen min-w-screen max-h-screen max-w-screen">
           
           
           {cartas.map((jugador, index) => (
@@ -87,6 +87,7 @@ function App() {
               probabilidad={jugador.probabilidad}
               carta1={jugador.carta1}
               carta2={jugador.carta2}
+              id={jugador.id}
             />
           ))}
 
